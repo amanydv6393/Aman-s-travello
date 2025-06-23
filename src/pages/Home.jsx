@@ -10,6 +10,7 @@ import BannerImg from "../assets/cover-women.jpg";
 import Banner2 from "../assets/travel-cover2.jpg";
 import OrderPopup from "../components/OrderPopup/OrderPopup";
 import Whyamantravel from "../components/Whyamantravel/Whyamantravel";
+import WhatSetsUsApart from "../components/WhatSetsUsApart/WhatSetsUsApart.jsx";
 
 const Home = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -37,6 +38,7 @@ const Home = () => {
         <Banner />
         <BannerPic img={Banner2} />
         <Testimonial />
+        <WhatSetsUsApart/>
          <Whyamantravel/>
         <OrderPopup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
       </div>
