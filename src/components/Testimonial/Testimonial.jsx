@@ -1,8 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 
-
-
 const testimonialData = [
   {
     id: 1,
@@ -22,7 +20,12 @@ const testimonialData = [
     text: "From booking to exploring — everything felt effortless. Highly recommend it to every traveler out there!",
     img: "https://randomuser.me/api/portraits/men/46.jpg",
   },
- 
+  {
+    id: 4,
+    name: "Subhangi Madan",
+    text: "It was the perfect solo trip! Felt safe, had fun, and the places were just breathtaking!",
+    img: "https://images.pexels.com/photos/1310522/pexels-photo-1310522.jpeg?auto=compress&cs=tinysrgb&h=500&w=500",
+  },
   {
     id: 5,
     name: "Mahika Bhatnagar",
@@ -41,18 +44,12 @@ const testimonialData = [
     text: "The planning, the destinations, and the people – everything was top notch. Highly recommended!",
     img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
- {
-  id: 4,
-  name: "Subhangi Madan",
-  text: "It was the perfect solo trip! Felt safe, had fun, and the places were just breathtaking!",
-  img: "https://images.pexels.com/photos/1310522/pexels-photo-1310522.jpeg?auto=compress&cs=tinysrgb&h=500&w=500",
-},
-{
-  id: 8,
-  name: "Michele Morrone",
-  text: "Absolutely stunning experience. As a frequent traveler, this was one of my best trips ever!",
-  img: "https://randomuser.me/api/portraits/men/75.jpg",
-},
+  {
+    id: 8,
+    name: "Michele Morrone",
+    text: "Absolutely stunning experience. As a frequent traveler, this was one of my best trips ever!",
+    img: "https://randomuser.me/api/portraits/men/75.jpg",
+  },
 ];
 
 const Testimonial = () => {
@@ -61,7 +58,7 @@ const Testimonial = () => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
@@ -69,6 +66,7 @@ const Testimonial = () => {
     pauseOnHover: true,
     pauseOnFocus: true,
     responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 3 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 640, settings: { slidesToShow: 1 } },
     ],
@@ -89,11 +87,11 @@ const Testimonial = () => {
         </div>
 
         {/* Slider */}
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-[1280px] mx-auto">
           <Slider {...settings}>
             {testimonialData.map(({ id, name, text, img }) => (
-              <div key={id} className="my-6">
-                <div className="flex flex-col justify-center items-center gap-4 text-center shadow-lg p-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative transition-transform hover:scale-105 duration-300">
+              <div key={id} className="my-6 px-3">
+                <div className="flex flex-col justify-center items-center gap-4 text-center shadow-lg p-6 rounded-xl dark:bg-gray-800 bg-primary/10 relative transition-transform hover:scale-105 duration-300">
                   <img
                     src={img}
                     alt={name}
