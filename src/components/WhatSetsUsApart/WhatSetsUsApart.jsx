@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 
 const WhatSetsUsApart = () => {
   return (
-    <div className="bg-[#f9f7f4] py-16 px-4 sm:px-8 lg:px-24">
-      <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12 text-gray-900">
+    <div 
+    className="bg-[#f9f7f4] py-16 px-4 sm:px-8 lg:px-24">
+      <h2 
+       data-aos="fade-up"
+       className="text-3xl sm:text-4xl font-semibold text-center mb-12 text-gray-900">
         What sets us apart
       </h2>
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 mb-20">
-        <div className="flex-1 max-w-xl">
+        <div 
+         data-aos="fade-up"
+        className="flex-1 max-w-xl">
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">
             We're all about sharing the joy of travel
           </h3>
@@ -21,7 +26,9 @@ const WhatSetsUsApart = () => {
           </button>
         </div>
 
-        <div className="flex-1">
+        <div 
+         data-aos="zoom-in"
+         className="flex-1">
           <img
             src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
             alt="Travel joy"
@@ -31,29 +38,36 @@ const WhatSetsUsApart = () => {
       </div>
 
       <div className="text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900">
+        <h2 
+         data-aos="fade-up"
+         className="text-3xl sm:text-4xl font-semibold text-gray-900">
           Why travel with G Adventures?
         </h2>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        <p 
+         data-aos="fade-up"
+         className="text-gray-600 mt-4 max-w-2xl mx-auto">
           In just over a year, Aman's Travello has transformed how small group travel feels — authentic, meaningful, and unforgettable. Come see how we’re shaping the future of exploration.
         </p>
 
         {/* ✅ Link to Learn Page */}
-        <Link to="/learn" className="text-purple-700 font-semibold mt-2 inline-block hover:underline">
+        <Link to="/learn" 
+         data-aos="fade-up"
+         className="text-purple-700 font-semibold mt-2 inline-block hover:underline">
           Learn more
         </Link>
       </div>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div  
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition duration-200 text-left"
+            data-aos="fade-up"className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition duration-200 text-left"
           >
-            <div className="text-3xl mb-3">{feature.icon}</div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</h3>
-            <p className="text-gray-600 text-sm">{feature.description}</p>
+            <div data-aos="zoom-in"className="text-3xl mb-3">{feature.icon}</div>
+            <h3 data-aos="zoom-in"className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</h3>
+            <p data-aos="zoom-in"className="text-gray-600 text-sm">{feature.description}</p>
           </div>
         ))}
       </div>

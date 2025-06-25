@@ -12,6 +12,7 @@ import OrderPopup from "../components/OrderPopup/OrderPopup";
 import Whyamantravel from "../components/Whyamantravel/Whyamantravel";
 import WhatSetsUsApart from "../components/WhatSetsUsApart/WhatSetsUsApart.jsx";
 import FAQSection from "../components/FAQSection/FAQSection.jsx";
+import RailCollection from "../components/RailCollection/RailCollection.jsx";
 
 const Home = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -37,11 +38,13 @@ const Home = () => {
         <BannerPic img={BannerImg} />
         <BlogsComp />
         <Banner />
+        <RailCollection/>
         <BannerPic img={Banner2} />
-        <Testimonial />
         <WhatSetsUsApart/>
-         <Whyamantravel/>
          <FAQSection/>
+         <Testimonial />
+         <Whyamantravel/>
+        
         <OrderPopup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
       </div>
     </>
