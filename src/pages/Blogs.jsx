@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import mountainBg from "../../src/assets/places/blogmain.jpg";
+import mountainBg from "../../src/assets/video/main.mp4";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaHeart, FaShareAlt } from "react-icons/fa";
@@ -243,14 +243,25 @@ const Blogs = () => {
   return (
     <div className="w-full dark:bg-gray-900 dark:text-white">
       {/* Hero Section */}
-      <div
-        className="w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${mountainBg})` }}
-      >
-        <h1 data-aos="fade-down" className="text-white text-5xl font-bold drop-shadow-lg">
-          Blogs
-        </h1>
-      </div>
+    <div className="w-full h-[60vh] relative flex items-center justify-center overflow-hidden">
+  {/* Background Video */}
+  <video
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src={mountainBg} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Overlay Text */}
+  <h1 data-aos="fade-down" className="text-white text-5xl font-bold drop-shadow-lg z-10">
+    Blogs
+  </h1>
+</div>
+
 
       {/* Blog Cards */}
       <div className="max-w-7xl mx-auto px-4 py-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">

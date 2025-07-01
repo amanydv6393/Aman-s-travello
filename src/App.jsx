@@ -14,6 +14,7 @@ import BlogsDetails from "./pages/BlogsDetails";
 // 👇 Tumhare naye pages
 import WhatSetsUsApart from "../src/components/WhatSetsUsApart/WhatSetsUsApart";
 import LearnPage from "../src/components/LearnPage/LearnPage";
+import KashmirGreatLakes from "./components/TrekDetailsPage/TrekDetailsPage";
 
 const App = () => {
   React.useEffect(() => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="best-places" element={<PlacesRoute />} />
           <Route path="about" element={<About />} />
           <Route path="sets-us-apart" element={<WhatSetsUsApart />} />
+          <Route path="/kashmir-great-lakes" element={<KashmirGreatLakes />} />
           <Route path="learn" element={<LearnPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>

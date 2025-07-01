@@ -13,6 +13,7 @@ import Whyamantravel from "../components/Whyamantravel/Whyamantravel";
 import WhatSetsUsApart from "../components/WhatSetsUsApart/WhatSetsUsApart.jsx";
 import FAQSection from "../components/FAQSection/FAQSection.jsx";
 import RailCollection from "../components/RailCollection/RailCollection.jsx";
+import TravelChatPopup from "../components/TravelChatPopup/TravelChatPopup.jsx";
 
 const Home = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -44,7 +45,7 @@ const Home = () => {
          <FAQSection/>
          <Testimonial />
          <Whyamantravel/>
-        
+        <TravelChatPopup/>
         <OrderPopup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
       </div>
     </>

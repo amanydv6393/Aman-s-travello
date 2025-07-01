@@ -46,7 +46,7 @@ const trips = [
   },
   {
     days: "14 DAY TOUR",
-    title: "Epic Vietnam: Hanoi, Ho Chi Minh City",
+    title: "Epic Vietnam: Hanoi, Ho Chi Minh City ",
     price: "$804",
     image:
       "https://images.pexels.com/photos/1102398/pexels-photo-1102398.jpeg",
@@ -103,18 +103,18 @@ const RailCollection = () => {
                   alt={trip.title}
                   className="w-full h-48 object-cover"
                 />
-                <div className="p-4">
-                  <p className="text-xs text-gray-500 font-medium mb-1">{trip.days}</p>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div data-aos="zoom-in" className="p-4">
+                  <p data-aos="zoom-in" className="text-xs text-gray-500 font-medium mb-1">{trip.days}</p>
+                  <h3 data-aos="zoom-in" className="text-lg font-semibold text-gray-900 mb-2">
                     {trip.title}
                   </h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    <span className="text-xl font-bold text-gray-900">
+                  <p data-aos="zoom-in" className="text-sm text-gray-600 mb-4">
+                    <span data-aos="zoom-in" className="text-xl font-bold text-gray-900">
                       {trip.price}
                     </span>{" "}
                     / per person
                   </p>
-                  <button className="text-purple-700 font-semibold hover:underline">
+                  <button data-aos="zoom-in" className="text-purple-700 font-semibold hover:underline">
                     View itinerary
                   </button>
                 </div>

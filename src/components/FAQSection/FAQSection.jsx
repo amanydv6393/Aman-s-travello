@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import faqq from "../../assets/fawq.jpg";
+import faqq from "../../assets/places/FAQIMG.png";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -70,7 +70,11 @@ const highlightText = (text, keyword) => {
   if (!keyword) return text;
   const regex = new RegExp(`(${keyword})`, "gi");
   return text.split(regex).map((part, i) =>
-    regex.test(part) ? <mark key={i} className="bg-yellow-200">{part}</mark> : part
+    regex.test(part) ? (
+      <mark key={i} className="bg-yellow-200 dark:bg-yellow-600">{part}</mark>
+    ) : (
+      part
+    )
   );
 };
 
@@ -95,19 +99,12 @@ const FAQSection = () => {
   };
 
   return (
-  
-      <section
-  className="py-16 px-6 sm:px-12 lg:px-32"
-  style={{
-    backgroundColor: "white",
-  }}
->
-
+    <section className="py-16 px-6 sm:px-12 lg:px-32 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: FAQ Content */}
         <div>
           <h2
-            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6"
+            className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6"
             data-aos="fade-up"
           >
             Frequently Asked Questions
@@ -118,28 +115,28 @@ const FAQSection = () => {
             placeholder="Search question here"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full border border-gray-300 rounded-md px-4 py-2 mb-6 outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white rounded-md px-4 py-2 mb-6 outline-none focus:ring-2 focus:ring-purple-400"
             data-aos="fade-up"
             data-aos-delay="100"
           />
 
           <div className="space-y-4">
             {filteredFaqs.length === 0 ? (
-              <p className="text-sm text-gray-500">No results found.</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">No results found.</p>
             ) : (
               filteredFaqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="border-b pb-3 cursor-pointer transition-all duration-300"
+                  className="border-b border-gray-300 dark:border-gray-700 pb-3 cursor-pointer transition-all duration-300"
                   onClick={() => toggle(index)}
                   data-aos="fade-up"
                   data-aos-delay={index * 80}
                 >
                   <div className="flex justify-between items-center">
-                    <h4 className="font-semibold text-gray-800">
+                    <h4 className="font-semibold text-gray-800 dark:text-white">
                       {highlightText(faq.question, searchTerm)}
                     </h4>
-                    <span className="text-xl text-gray-500">
+                    <span className="text-xl text-gray-500 dark:text-gray-400">
                       {openIndex === index ? "−" : "+"}
                     </span>
                   </div>
@@ -149,7 +146,7 @@ const FAQSection = () => {
                     }`}
                   >
                     {openIndex === index && (
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         {highlightText(faq.answer, searchTerm)}
                       </p>
                     )}
@@ -161,13 +158,15 @@ const FAQSection = () => {
         </div>
 
         {/* Right: Illustration */}
-        <div className="flex justify-center" data-aos="zoom-in">
-          <img
-            src={faqq}
-            alt="FAQ Illustration"
-            className="w-full max-w-[950px] object-contain"
-          />
-        </div>
+  {/* Right: Illustration */}
+<div className="flex justify-center" data-aos="zoom-in">
+  <img
+    src={faqq}
+    alt="FAQ Illustration"
+    className="w-full max-w-[360px] sm:max-w-[400px] md:max-w-[450px] object-contain ]"
+  />
+</div>
+
       </div>
     </section>
   );
