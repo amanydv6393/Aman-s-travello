@@ -7,7 +7,7 @@ const trips = [
     title: "Highlights of Poland",
     price: "$1844",
     image:
-      "https://media.gadventures.com/media-server/cache/06/43/0643ac0abbabdaaac22a4a48a5667fb3.webp",
+      "https://images.pexels.com/photos/1857003/pexels-photo-1857003.jpeg",
   },
   {
     days: "11 DAY TOUR",

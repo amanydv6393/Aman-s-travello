@@ -14,6 +14,7 @@ import WhatSetsUsApart from "../components/WhatSetsUsApart/WhatSetsUsApart.jsx";
 import FAQSection from "../components/FAQSection/FAQSection.jsx";
 import RailCollection from "../components/RailCollection/RailCollection.jsx";
 import TravelChatPopup from "../components/TravelChatPopup/TravelChatPopup.jsx";
+import CanadaToursSection from "../components/CanadaToursSection/CanadaToursSection.jsx";
 
 const Home = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -36,6 +37,7 @@ const Home = () => {
           <Hero />
         </div>
         <Places handleOrderPopup={handleOrderPopup} />
+        <CanadaToursSection/>
         <BannerPic img={BannerImg} />
         <BlogsComp />
         <Banner />
