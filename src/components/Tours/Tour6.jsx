@@ -10,7 +10,7 @@ const Tour6 = () => (
  <div className="relative w-full max-h-[500px] mb-10">
   <img
     src="https://images.pexels.com/photos/9955802/pexels-photo-9955802.jpeg"
-    alt="Hampta Pass"
+    alt="Makruzz Catamaran"
     className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
   />
   <div className="absolute inset-0 bg-black/40 rounded-2xl flex flex-col items-center justify-center text-center px-4">

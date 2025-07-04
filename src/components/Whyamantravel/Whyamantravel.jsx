@@ -60,7 +60,7 @@ const WhyMakeMyTrip = () => {
             <p data-aos="fade-up" className="text-gray-800 dark:text-gray-200 leading-relaxed">
              Founded in 2024, Aman’s Escapades has swiftly emerged as a premier name in elite travel curation — offering distinguished journeys, exceptional airfare privileges, and handpicked hotel stays with unrivaled ease. Our platform is designed for discerning explorers seeking more than just a booking — it’s an invitation to seamless, indulgent escapes via desktop or mobile.From tailored instant deals and exclusive fare calendars to elite benefits like MyRewardsProgram and MyWallet, we continuously refine our offerings to align with the evolving aspirations of our sophisticated clientele. At Aman’s Escapades, every journey begins with effortless elegance and ends in unforgettable memories.
             </p>
-          </div>
+          </div> 
           <div>
             <h2 data-aos="fade-up" className="text-lg font-bold mb-4">Booking Flights with Aman’s Escapades</h2>
             <p data-aos="fade-up" className="text-gray-800 dark:text-gray-200 leading-relaxed">
